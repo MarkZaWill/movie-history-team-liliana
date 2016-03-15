@@ -1,0 +1,15 @@
+@import '_headcontainer';
+
+$main-white: floralwhite;
+
+body {
+	background-color: $main-white;
+}
+
+/*Hides all elements*/
+.hide {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
