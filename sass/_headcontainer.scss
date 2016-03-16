@@ -11,18 +11,18 @@ $font-blue: midnightblue;
   }
 }
 
+.banner {
+	color: $font-blue;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+
 #loginModal {
 	margin-top: 5%;
 }
 
 #optionBar {
 	text-align: right;
-}
-
-#optionBar {
-	span {
-		border-right: 1px solid white;
-	}
 }
 
 #optionBar {
@@ -40,12 +40,6 @@ $font-blue: midnightblue;
 	}
 }
 
-#optionBar {
-	span a:last-child{
-	border: none;
-	}
-}
-
 .messageDiv {
 	margin-top: 40px;
 }
@@ -56,4 +50,6 @@ $font-blue: midnightblue;
 	font-weight: 700;
 	font-size: 20px;
 }
+
+
 
