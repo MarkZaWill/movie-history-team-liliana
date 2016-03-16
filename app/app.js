@@ -13,13 +13,17 @@ let MovieApp = angular.module('MovieApp', ["ngRoute"]);
       	templateUrl: 'partials/main.html',
       	controller: 'MainCtrl'
       }).
-      when('/search', {
+      when('/find', {
 	    	templateUrl: 'partials/find-movie.html',
-	    	controller: 'SearchCtrl'
+	    	controller: 'FindCtrl'
       }).
       when('/movielist', {
 	    	templateUrl: 'partials/movie-list.html',
 	    	controller: 'MovieListCtrl'
+      }).
+      when('/search', {
+	    	templateUrl: 'partials/search-movie.html',
+	    	controller: 'SearchCtrl'
       }).
       otherwise({
       	redirectTo: '/login'
