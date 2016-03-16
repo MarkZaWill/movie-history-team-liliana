@@ -17,11 +17,26 @@
 
 <div class="col-lg-8 searchBar">
   <div class="input-group">
-    <input type="text" class="form-control" placeholder="Search for...">
+    <input type="text" class="form-control" placeholder="Search for..." ng-model="searchField.title">
     <span class="input-group-btn">
-      <button class="btn btn-default" type="button">Go!</button>
+      <button class="btn btn-default" type="button" ng-click="getMovies(searchField.title)">Go!</button>
     </span>
   </div>
 </div>
 
 <!-- div for containing results after search -->
+<div>
+	<img ng-src="{{moviesObj.Poster}}">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
