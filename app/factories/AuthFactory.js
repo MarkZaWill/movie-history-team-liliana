@@ -24,12 +24,12 @@ MovieApp.factory("authFactory", function () {
       return new Promise((resolve, reject) => {
         ref.authWithPassword({
           "email": credentials.email,
-          "password": credentials.password
+          "password": credentials.password,
         }, (error, authData) => {
           if (error) {
             reject(error);
           } else {
-            console.log("authWithPassword method completed successfully");
+            console.log("Successfully completed authorization.");
             resolve(authData);
           }
         });

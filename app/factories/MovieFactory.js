@@ -7,12 +7,12 @@ MovieApp.factory("MovieFactory", function($q, $http) {
 
     // Return a promise for our async XHR
     return $q(function(resolve, reject) {
-
+    	
       // Perform some asynchronous operation, resolve or reject 
       // the promise when appropriate.
       $http.get(movie)
       .success(
-        function(moviesObj) {
+        function (moviesObj) {
           resolve(moviesObj);
           // console.log("moviesObj", moviesObj);
         },function(error) {
