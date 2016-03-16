@@ -21,7 +21,7 @@ MovieApp.controller("MainCtrl",
       If successful, immediately log user in.
      */
     $scope.logout = () => {
-      console.log("Unauthenticating user");
+      console.log("User is Logged Out.");
       ref.unauth();
     };
 
