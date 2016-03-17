@@ -2,7 +2,15 @@
 <!-- Log out bar -->
 <div class="optionContainer">
 	<div id="optionBar" class="bg-primary">
-		<span  id="logoutBtn"><a href="#/login" ng-click="logout()">Log Out</a></span>
+		<div class="col-md-8 searchBar">
+  			<div class="input-group">
+    		<input type="text" class="form-control" placeholder="Search for..." ng-model="searchField.title">
+    		<span class="input-group-btn">	
+      			<button class="btn btn-default" type="button" ng-click="getMovies(searchField.title)">Search!</button>
+    		</span>
+  			</div>
+		</div>
+		<span  id="logoutBtn"><a href="#/logout">Log Out</a></span>
 	</div>
 </div>
 
@@ -26,4 +34,9 @@
 <div class="banner">
 	<h1>Welcome to the Movies</h1>
 </div>
-
+<div>
+	<span class="filterbar" ng-click="">Not Tracked</span>
+	<span class="filterbar" ng-click="">Not Watched</span>	
+	<span class="filterbar" ng-click="">Watched</span>
+	<span class="filterbar" ng-click="">Favorites</span>
+</div>

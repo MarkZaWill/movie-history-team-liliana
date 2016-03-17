@@ -1,9 +1,19 @@
-
-<!-- Log out bar -->
 <div class="optionContainer">
+	<nav>
 	<div id="optionBar" class="bg-primary">
+		<div class="col-md-8 searchBar">
+  			<div class="input-group">
+    		<input type="text" class="form-control" placeholder="Search for..." ng-model="searchField.title">
+    		<span class="input-group-btn">	
+      			<button class="btn btn-default searchButton" type="button" ng-click="getMovies(searchField.title)">Search!</button>
+    		</span>
+  			</div>
+		</div>
 		<span  id="logoutBtn"><a href="#/logout">Log Out</a></span>
 	</div>
+	</nav>
+
+	<!-- Log out bar -->
 </div>
 
 <!-- Main logo header -->
