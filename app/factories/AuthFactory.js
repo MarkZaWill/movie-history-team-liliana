@@ -2,7 +2,7 @@
 
 MovieApp.factory("authFactory", function () {
 
-  let ref = new Firebase("https://movie-history-proj.firebaseio.com/");
+  let ref = new Firebase("https://moviehistbnc.firebaseio.com/");
 
   return {
     /*
