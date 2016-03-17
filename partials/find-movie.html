@@ -24,19 +24,38 @@
 		</div>	
 	</div>
 </div>
+<!-- NAV BAR with options for FIND NEW MOVIES AND SEARCH YOUR MOVIES -->
+<div role="navigation">
+	<ol class="breadcrumb">
+	  <li><a href="#/find">Find New Movies</a></li>
+	  <li><a href="#/search">Search Your Movies</a></li>
+	</ol>
+</div>
 
-<div class="col-lg-8 searchBar">
+
+
+<div class="banner">
+	<h1>Welcome to the Movies</h1>
+</div>
+<div>
+	<span class="filterbar" ng-click="">Not Tracked</span>
+	<span class="filterbar" ng-click="">Not Watched</span>	
+	<span class="filterbar" ng-click="">Watched</span>
+	<span class="filterbar" ng-click="">Favorites</span>
+</div>
+<!-- <div class="col-lg-8 searchBar">
   <div class="input-group">
     <input type="text" class="form-control" placeholder="Search for..." ng-model="searchField.title">
     <span class="input-group-btn">
       <button class="btn btn-default" type="button" ng-click="getMovies(searchField.title)">Go!</button>
     </span>
   </div>
-</div>
+</div> -->
 
 <!-- div for containing results after search -->
 <div id="movieImage">
-	<img src={{movieImages.image}}>
+	<img ng-click="addMovie()" src={{movieImages.image}}>
+	<button ng-click="addMovie()" >add to watchlist</button>
 </div>
 
 
