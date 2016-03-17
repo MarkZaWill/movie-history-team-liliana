@@ -53,11 +53,13 @@
 </div> -->
 
 <!-- div for containing results after search -->
-<div id="movieImage">
-	<img ng-click="addMovie()" src={{movieImages.image}}>
-	<button ng-click="addMovie()" >add to watchlist</button>
-</div>
 
+<div id="movieImage">
+	<div ng-repeat="movieImg in movieImages">
+	<img src={{movieImg}}>
+	</div>
+	<button ng-click="addMovie()">add to watchlist</button>
+</div>
 
 
 

@@ -1,6 +1,6 @@
 "use strict";
 
-MovieHistory.controller("MovieListCtrl",
+MovieApp.controller("MovieListCtrl",
 [
   "$scope",
   "$location",
@@ -26,7 +26,7 @@ MovieHistory.controller("MovieListCtrl",
         JSON.stringify({
           name: $scope.newMovie.name,
           year: $scope.newMovie.year,
-          actors: $scope.newMovie.actors
+          actors: $scope.newMovie.actors,
           watchlist:$scope.newMovie.watched
         })
 
@@ -37,4 +37,4 @@ MovieHistory.controller("MovieListCtrl",
       );
     };  
   }
-]
+])

@@ -9,19 +9,29 @@ MovieApp.controller("FindCtrl", [
 
   function ($scope, $http, $location, MovieFactory) {
     // Default property values for keys bound to input fields
-    $scope.movieImages = {};
+    $scope.movieImages = [];
     $scope.searchField = {
       "title": ""
     }
 
     $scope.getMovies = function (movieTitle) {
-      $scope.apiCall = "http://www.omdbapi.com/?t=" + movieTitle;
-
+      $scope.apiCall = "http://www.omdbapi.com/?s=" + movieTitle;
+     
       // Invoke the promise that reads from Firebase
       MovieFactory($scope.apiCall).then(
+
         function (moviesObj) {
-        	$scope.movieImages.image = moviesObj.Poster;
-        	console.log("movies:", $scope.movieImages);
+          console.log("moviesObj", moviesObj.Search);
+           // for (var i in moviesObj.Search){
+            $scope.movieImages = [];
+            for (var i = 0; i < 5; i++) {
+             
+           console.log("moviesObj.Search.Poster", moviesObj.Search[i].Poster);
+               if (moviesObj.Search[i].Poster != "N/A") {
+        	$scope.movieImages.push(moviesObj.Search[i].Poster);
+        	console.log("movies:", $scope.movieImages.image);
+        }
+      }
         },
 
         // Handle reject() from the promise
@@ -30,5 +40,6 @@ MovieApp.controller("FindCtrl", [
         }
       )
     }
-  }
+    }
+  
 ]);
