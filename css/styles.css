@@ -4,6 +4,16 @@
   font-size: 55px;
   color: midnightblue; }
 
+.bg-primary {
+  height: 70px;
+}
+.searchBar {
+  margin-top: 10px; 
+}
+#logoutBtn {
+  margin-top: 20px;
+}
+
 .banner {
   color: midnightblue;
   text-align: center;
@@ -35,3 +45,9 @@
 
 body {
   background-color: floralwhite; }
+
+.filterbar {
+  border: solid;
+  padding: 0 10px;
+  margin: 0;
+}
