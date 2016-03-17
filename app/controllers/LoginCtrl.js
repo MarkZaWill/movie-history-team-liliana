@@ -11,7 +11,7 @@ MovieApp.controller("LoginCtrl",
   function ($scope, $location, $http, authFactory) {
 
     // Local variables
-    let ref = new Firebase("https://movie-history-proj.firebaseio.com/");
+    let ref = new Firebase("https://moviehistbnc.firebaseio.com/");
 
     // Variables on $scope for use in DOM
     $scope.account = { email: "", password: "" };

@@ -1,0 +1,12 @@
+<section>
+  <div>
+    <input type="text" ng-model="songSearchText" />
+  </div>
+
+  <div class="c-movie" ng-repeat="movie in movies | filter: movieSearchText">
+    <a href="#/movies/{{ movie.$id }}">{{ movie.name }}</span></a>
+    <x-movie-history-movie-brief movie="movie" max-rating="10"></x-movie-history-movie-brief>
+  </div>
+
+  <a href="#/movies/new">Create New Movie</a>
+</section>
